@@ -1,0 +1,15 @@
+INSTRUCTIONS
+
+FIRST COMMAND 
+
+nasm -f elf32 hello.asm -o hello.o
+
+
+SECOND COMMAND
+
+ld -m elf_i386 -s -o hello hello.o
+
+THIRD COMMAND
+
+./hello
+
