@@ -1,0 +1,25 @@
+command and output for 5
+
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf64 -o hello5.o hello5.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ gcc -nostartfiles -no-pie -o hello5 hello5.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello5
+ALP for non-overlapped block transfer using string instructions: 
+
+Before Block Transfer: 
+
+The source block contains the elements: 
+1245872497
+
+The destination block contains the elements: 
+0000000000
+
+After Block Transfer: 
+
+The source block contains the elements: 
+1245872497
+
+The destination block contains the elements: 
+1245872497(base) pc-05@pc05-ThinkCentre-M71e:~$ 
+
