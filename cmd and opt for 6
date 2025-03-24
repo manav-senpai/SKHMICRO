@@ -1,0 +1,65 @@
+command and output for 6
+
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf32 -o hello6.o hello6.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ld -m elf_i386 -o hello6 hello6.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello6
+
+1.nonoverlap with string
+2.nonoverlap without string
+3.overlap with string
+4.overlap without string
+5.exit
+Enter your choice ->
+1
+
+Source block contents are 
+0001 0002 0003 0004 0005 
+Destination block contents are 
+0001 0002 0003 0004 0005 
+1.nonoverlap with string
+2.nonoverlap without string
+3.overlap with string
+4.overlap without string
+5.exit
+Enter your choice ->
+2
+
+Source block contents are 
+0001 0002 0003 0004 0005 
+Destination block contents are 
+0001 0002 0003 0004 0005 
+1.nonoverlap with string
+2.nonoverlap without string
+3.overlap with string
+4.overlap without string
+5.exit
+Enter your choice ->
+3
+
+Source block contents are 
+0001 0002 0003 0004 0005 
+Destination block contents are 
+0001 0002 0001 0002 0003 0004 0005 
+1.nonoverlap with string
+2.nonoverlap without string
+3.overlap with string
+4.overlap without string
+5.exit
+Enter your choice ->
+4
+
+Source block contents are 
+0001 0002 0001 0002 0003 
+Destination block contents are 
+0001 0002 0001 0002 0001 0002 0003 
+1.nonoverlap with string
+2.nonoverlap without string
+3.overlap with string
+4.overlap without string
+5.exit
+Enter your choice ->
+5
+(base) pc-05@pc05-ThinkCentre-M71e:~$ 
+
