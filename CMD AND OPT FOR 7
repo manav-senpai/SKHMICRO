@@ -1,0 +1,39 @@
+COMMAND AND OUTPUT FOR 7
+
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf64 -o hello7.o hello7.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ gcc -nostartfiles -no-pie -o hello7 hello7.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello7
+
+MENU For Multiplication
+1. Successive Addition
+2. Shift and Add method
+3. Exit
+
+Enter your choice: 1
+
+Enter first 4 digit hexadecimal no:1A3F    
+
+Enter second 4 digit hexadecimal no:B2C4
+E63C
+MENU For Multiplication
+1. Successive Addition
+2. Shift and Add method
+3. Exit
+
+Enter your choice: 2
+
+Enter first 4 digit hexadecimal no:0006
+
+Enter second 4 digit hexadecimal no:0003
+0012
+MENU For Multiplication
+1. Successive Addition
+2. Shift and Add method
+3. Exit
+
+Enter your choice: 3
+(base) pc-05@pc05-ThinkCentre-M71e:~$ 
+
+
