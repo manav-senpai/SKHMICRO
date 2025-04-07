@@ -1,0 +1,14 @@
+code and output for 10
+
+
+
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf64 -o hello10.o hello10.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ld -s -o hello10 hello10.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello10
+------ Factorial Program ------
+Enter Number: 
+5
+Factorial is: 120
+

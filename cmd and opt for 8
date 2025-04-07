@@ -1,0 +1,43 @@
+assingment 8 commands and output
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf64 -o hello8.o hello8.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ld -s -o hello8 hello8.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello8
+------ MENU ------
+1.TYPE
+2.COPY
+3.DELETE
+4.Exit
+Enter Your Choice
+1
+error in opening file
+file1 closed successfully
+------ MENU ------
+1.TYPE
+2.COPY
+3.DELETE
+4.Exit
+Enter Your Choice
+2
+error in opening file
+file1 opened successfully
+Content copied in destination file
+file1 closed successfully
+file2 closed successfully
+------ MENU ------
+1.TYPE
+2.COPY
+3.DELETE
+4.Exit
+Enter Your Choice
+3
+file3 deleted successfully
+------ MENU ------
+1.TYPE
+2.COPY
+3.DELETE
+4.Exit
+Enter Your Choice
+4
+

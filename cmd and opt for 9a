@@ -1,0 +1,14 @@
+commands and output for 9a
+
+
+
+(base) pc-05@pc05-ThinkCentre-M71e:~$ nasm -f elf64 -o hello9a.o hello9a.asm
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ld -s -o hello9a hello9a.o
+(base) pc-05@pc05-ThinkCentre-M71e:~$ ./hello9a
+file opened successfully
+No of spaces are 10
+No of enters are 1
+enter the character
+t
+No of occurance of character 4
+
