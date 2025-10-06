@@ -1,0 +1,39 @@
+create database trigExample;
+use trigExample;
+create table Library(BookId int primary key, Title VARCHAR(100), Author VARCHAR(100), Price DECIMAL(8,2));
+
+create table  Library_Audit(AuditID INT AUTO_INCREMENT PRIMARY KEY,
+BookId INT,Title VARCHAR(100),Author VARCHAR(100),
+Price DECIMAL(8,2),ActionType VARCHAR(20),
+ActionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+
+drop table Library_Audit;
+DELIMITER $$
+create trigger before_library_update
+before update on Library   
+for each row
+begin
+  insert into Library_Audit(BookID,Title,Author,Price,ActionType)
+  values(OLD.BookID,OLD.Title,OLD.Author,OLD.Price,'UPDATE');
+end$$
+DELIMITER ;
+
+DELIMITER $$
+create trigger before_library_delete
+before delete on Library 
+for each row
+begin
+ insert into Library_Audit(BookID,Title,Author,Price,ActionType)
+ values(OLD.BookID,OLD.Title,OLD.Author,OLD.Price,'DELETE');
+end$$
+DELIMITER ;
+
+insert into Library values(1,'DBMS Concepts','Navathe',500.00);
+insert into Library values(2,'Operating Systems','Galvin',650.00);
+select * from Library;
+describe Library;
+UPDATE Library SET Author="MMMMK" WHERE BookID=1;
+
+DELETE FROM Library WHERE BookID=2;
+select*from Library_Audit;
